@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+      "prefer-template": "error",
+      "import/no-anonymous-default-export": 0,
+      "react/display-name": 0,
+      "arrow-body-style": ["error", "as-needed"],
+      "no-console": ["error", { "allow": ["debug", "error", "warn", "info"] }]
+  }
 }
