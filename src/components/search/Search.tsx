@@ -1,7 +1,7 @@
 import { useCharacters } from '@/context/charactersContext/CharactersContext';
 import useReactHookForm from '@/hooks/useReactHookForm/useReactHookForm';
-import SearchIcon from '@/icons/SearchIcon';
 import { searchSchema } from '@/schemas/searchSchema';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -52,7 +52,7 @@ const Search = ({ characterListLabel }: SearchProps) => {
             <FlexBox sx={classes.container}>
                 <CustomInput name="search" control={control} label="Rick Sanchez" error={!!errors?.search} />
                 <LoadingButton type="submit" sx={classes.loadingButton} loading={isSearching || isLoading}>
-                    <SearchIcon color="action" />
+                    <SearchRoundedIcon color="action" />
                 </LoadingButton>
             </FlexBox>
         </form>
